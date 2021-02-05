@@ -6,12 +6,7 @@ https://skiddie.pythonanywhere.com/web4/
 
 ## Play Around With What You Have
 
-This is the login webpage we're dealing with:
-![](/home/amogh/Pictures/TooLong.png)
-
-
-
-So even if we retrieve the username or password, we can't submit it due to that monstrous countdown.
+We have a login page wherein even if we retrieve the username or password, we can't submit it due to that monstrous countdown.
 As with any web challenge, we head straight to the sources. There we find a script which opens the gates for us:
 
 ```javascript
@@ -32,12 +27,19 @@ As with any web challenge, we head straight to the sources. There we find a scri
 We now know the username and, seemingly, even the password. 
 
 Let's try entering the credentials. We can now open the console and try our luck:
-![](/home/amogh/Pictures/Console.png)
+
+```C
+>checkPass();
+>false
+``
 
 We see that what we entered isn't valid. 
 Maybe the password isn't correct. Let's check:
 
-![](/home/amogh/Pictures/realpasswd.png)
+```C
+> javascript: passwd;
+> realpasswd!!
+```
 
 There we go. 
 Now that we have this, we can just enter it and (this is an improvisation on my end) click the submit button immediately after removing its `disabled` attribute.
