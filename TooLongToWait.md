@@ -31,7 +31,7 @@ Let's try entering the credentials. We can now open the console and try our luck
 ```C
 >checkPass();
 >false
-``
+```
 
 We see that what we entered isn't valid. 
 Maybe the password isn't correct. Let's check:
